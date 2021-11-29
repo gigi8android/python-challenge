@@ -62,6 +62,7 @@ ave_diff = revenue_diff_total/(revenue_diff_count)
 with open('analysis/Summary.txt', "w") as text_file:
     text_file.writelines("Financial Analysis\n")
     text_file.writelines("----------------------------\n")
+    # Formatting the percentage and currency's values
     text_file.writelines("\nTotal Months: %s" % month_count)
     text_file.writelines("\nTotal: %s" % "${:}".format(total_revenue))
     text_file.writelines("\nAverage Change: %s" % "${:.2f}".format(ave_diff))
@@ -76,6 +77,7 @@ print("\n")
 print(f"Financial Analysis")
 print(f"----------------------------")
 print(f"Total Months: " + str(month_count))
+# Formatting the percentage and currency's values
 print(f"Total: " + "${:}".format(total_revenue))
 print(f"Average Change: " + "${:.2f}".format(ave_diff))
 print(f"Greatest Increase in Profit: " + max_rev_mth + " (" + "${:}".format(max(revenue_change_list)) + ") ")
